@@ -1,0 +1,52 @@
+.header {
+  position: sticky;                          /* le menu reste collé en haut quand on fait défiler */
+  top: 0;                                    /* ...à 0px du haut de l'écran */
+  z-index: 10;                               /* passe au-dessus du reste du contenu */
+  background: rgba(247, 247, 245, 0.92);     /* notre gris --bg, légèrement transparent */
+  backdrop-filter: blur(8px);                /* floute ce qui passe derrière (effet verre) */
+  border-bottom: 1px solid var(--border);    /* fine ligne de séparation en bas */
+}
+
+.nav {
+  display: flex;                    /* aligne les enfants (logo + menu) sur une ligne */
+  align-items: center;              /* centrés verticalement */
+  justify-content: space-between;   /* logo tout à gauche, menu tout à droite */
+  min-height: 72px;                 /* hauteur de la barre */
+}
+
+.logo {
+  font-family: var(--font-title);
+  font-weight: 700;                 /* gras */
+  font-size: 22px;
+  color: var(--text);
+  text-decoration: none;            /* enlève le soulignement des liens */
+
+  span {
+    color: var(--accent);           /* le point en bleu */
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;                        /* espace de 28px entre chaque lien */
+  font-size: 15px;
+}
+
+.menu__link {
+  color: var(--muted);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--accent);           /* bleu au survol de la souris */
+  }
+}
+
+.btn-cv {
+  padding: 10px 18px;               /* espace intérieur : 10px en haut et en bas, 18px sur les côtés */
+  border-radius: 10px;              /* coins arrondis */
+  background: var(--text);          /* fond presque noir */
+  color: #fff;                      /* texte blanc */
+  text-decoration: none;
+  font-weight: 500;
+}

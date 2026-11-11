@@ -1,1 +1,34 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  /* Couleurs */
+  --accent: #2f5bea;   /* bleu principal : boutons, liens */
+  --bg: #f7f7f5;       /* fond de page, gris très clair */
+  --text: #14161b;     /* texte principal, presque noir */
+  --muted: #5b6170;    /* texte secondaire, gris */
+
+  /* Polices */
+  --font-body: 'Inter', sans-serif;
+  --font-title: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+--surface: #ffffff;   /* fond blanc des cartes */
+  --border: #e4e4e0;    /* couleur des bordures fines */
+}
+
+body {
+  margin: 0;                       /* supprime la marge de 8px que le navigateur ajoute par défaut */
+  background: var(--bg);           /* fond gris très clair */
+  color: var(--text);              /* texte presque noir */
+  font-family: var(--font-body);   /* police Inter pour tout le texte */
+  line-height: 1.6;                /* espace entre les lignes : texte plus lisible */
+}
+
+h1 {
+  font-family: var(--font-title);  /* police Space Grotesk pour les titres */
+  font-size: 64px;
+}
+
+.container {
+  max-width: 1180px;   /* le contenu ne dépasse jamais 1180px de large */
+  margin: 0 auto;      /* "auto" à gauche et à droite = centré dans la page */
+  padding: 0 24px;     /* 24px d'espace sur les côtés (utile sur mobile) */
+}
