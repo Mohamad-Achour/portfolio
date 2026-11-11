@@ -1,0 +1,52 @@
+<section id="accueil" class="container hero">
+
+  <!-- Colonne gauche : le texte -->
+  <div class="hero__text">
+    <div class="badge">
+      <span class="badge__dot"></span>
+      Disponible immédiatement · CDI
+    </div>
+
+    <p class="eyebrow">// {{ title }}</p>
+
+    <h1 class="hero__title">{{ name }}</h1>
+
+    <p class="hero__lead">
+      Je développe des applications web en <strong>Angular / Spring Boot</strong> et
+      <strong>C# / .NET</strong>, et je transforme les données métier en
+      <strong>tableaux de bord fiables</strong> (ETL, Tableau, Power BI).
+    </p>
+
+    <div class="hero__actions">
+      <a href="#projets" class="btn btn--primary">
+        Voir mes projets
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M5 12h14" /><path d="m13 6 6 6-6 6" />
+        </svg>
+      </a>
+      <a [href]="cvFullStack" target="_blank" class="btn btn--secondary">CV Full Stack</a>
+      <a [href]="cvBi" target="_blank" class="btn btn--secondary">CV BI</a>
+    </div>
+
+    <div class="hero__meta">
+      <span>{{ location }}</span>
+      <a [href]="linkedin" target="_blank">LinkedIn</a>
+      <a [href]="github" target="_blank">GitHub</a>
+    </div>
+  </div>
+
+  <!-- Colonne droite : la photo -->
+  <div class="hero__visual">
+    <div class="photo">
+      <div class="photo__circle"></div>
+      <div class="photo__ring"></div>
+      <img [src]="photo" [alt]="'Portrait de ' + name" width="499" height="499" />
+      <div class="photo__card">
+        <span class="photo__label">diplômé</span>
+        <span class="photo__value">Ingénieur UTBM · 2026</span>
+      </div>
+    </div>
+  </div>
+
+</section>

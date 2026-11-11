@@ -1,34 +1,68 @@
 :root {
   /* Couleurs */
-  --accent: #2f5bea;   /* bleu principal : boutons, liens */
-  --bg: #f7f7f5;       /* fond de page, gris très clair */
-  --text: #14161b;     /* texte principal, presque noir */
-  --muted: #5b6170;    /* texte secondaire, gris */
+  --accent: #2f5bea; /* bleu principal : boutons, liens */
+  --bg: #f7f7f5; /* fond de page, gris très clair */
+  --text: #14161b; /* texte principal, presque noir */
+  --muted: #5b6170; /* texte secondaire, gris */
+  --border-strong: #d5d5d0;   /* bordure un peu plus foncée, pour les boutons blancs */
 
   /* Polices */
   --font-body: 'Inter', sans-serif;
   --font-title: 'Space Grotesk', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
---surface: #ffffff;   /* fond blanc des cartes */
-  --border: #e4e4e0;    /* couleur des bordures fines */
+  --surface: #ffffff; /* fond blanc des cartes */
+  --border: #e4e4e0; /* couleur des bordures fines */
 }
 
 body {
-  margin: 0;                       /* supprime la marge de 8px que le navigateur ajoute par défaut */
-  background: var(--bg);           /* fond gris très clair */
-  color: var(--text);              /* texte presque noir */
-  font-family: var(--font-body);   /* police Inter pour tout le texte */
-  line-height: 1.6;                /* espace entre les lignes : texte plus lisible */
-}
-
-h1 {
-  font-family: var(--font-title);  /* police Space Grotesk pour les titres */
-  font-size: 64px;
+  margin: 0; /* supprime la marge de 8px que le navigateur ajoute par défaut */
+  background: var(--bg); /* fond gris très clair */
+  color: var(--text); /* texte presque noir */
+  font-family: var(--font-body); /* police Inter pour tout le texte */
+  line-height: 1.6; /* espace entre les lignes : texte plus lisible */
 }
 
 .container {
-  max-width: 1180px;   /* le contenu ne dépasse jamais 1180px de large */
-  margin: 0 auto;      /* "auto" à gauche et à droite = centré dans la page */
-  padding: 0 24px;     /* 24px d'espace sur les côtés (utile sur mobile) */
+  max-width: 1180px; /* le contenu ne dépasse jamais 1180px de large */
+  margin: 0 auto; /* "auto" à gauche et à droite = centré dans la page */
+  padding: 0 24px; /* 24px d'espace sur les côtés (utile sur mobile) */
+}
+
+/* Petit texte bleu au-dessus des titres, style "code" */
+.eyebrow {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--accent);
+}
+
+/* Base commune à tous les boutons */
+.btn {
+  display: inline-flex;      /* aligne le texte et l'icône sur une ligne */
+  align-items: center;
+  gap: 10px;                 /* espace entre le texte et l'icône */
+  min-height: 52px;          /* assez grand pour être cliqué au doigt sur mobile */
+  padding: 0 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease;   /* l'animation dure 0,15 seconde */
+
+  &:hover {
+    transform: translateY(-1px);      /* le bouton monte d'1px au survol */
+  }
+}
+
+/* Variantes : on combine "btn" + une variante */
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn--secondary {
+  background: var(--surface);
+  border-color: var(--border-strong);
+  color: var(--text);
 }
