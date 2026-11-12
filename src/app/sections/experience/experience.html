@@ -1,0 +1,55 @@
+<section id="experiences" class="section section--white">
+  <div class="container">
+
+    <div class="section-head">
+      <p class="eyebrow">03 / Expériences</p>
+      <h2 class="h2">Parcours professionnel</h2>
+    </div>
+
+    @for (job of jobs; track job.company) {
+  <article class="job" [class.job--last]="$last">
+
+    <!-- Colonne gauche (1/3) : l'entreprise -->
+    <div class="job__side">
+      <a class="company" [href]="job.url" target="_blank" rel="noopener">
+        <span class="company__logo">
+          <img [src]="job.logo" alt="" width="56" height="56" />
+        </span>
+        <span class="company__name">
+          {{ job.company }} <span class="company__arrow" aria-hidden="true">↗</span>
+        </span>
+      </a>
+      <p class="company__activity">{{ job.activity }}</p>
+      <p class="company__dates">{{ job.dates }} · {{ job.place }}</p>
+    </div>
+
+    <!-- Colonne droite (2/3) : les missions -->
+    <div class="job__main">
+      <h3 class="job__role">{{ job.role }}</h3>
+
+      <ul class="job__points">
+        @for (point of job.points; track point) {
+          <li [innerHTML]="point"></li>
+        }
+      </ul>
+
+      <div class="job__result">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 6 9 17l-5-5" />
+        </svg>
+        <span>{{ job.result }}</span>
+      </div>
+
+      <div class="chips">
+        @for (tech of job.stack; track tech) {
+          <span class="chip--outline">{{ tech }}</span>
+        }
+      </div>
+    </div>
+
+  </article>
+}
+
+  </div>
+</section>

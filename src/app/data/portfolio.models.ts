@@ -19,11 +19,14 @@ export interface SkillGroup {
 }
 
 export interface Job {
-  dates: string;
   company: string;
+  url: string;        
+  logo: string;       
+  activity: string;   
+  dates: string;
   place: string;
   role: string;
-  points: string[];
+  points: string[];   
   result: string;
   stack: string[];
 }

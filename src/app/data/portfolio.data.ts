@@ -2,6 +2,7 @@
 
 import { About, Education, Job, Language, Profile, Project, SkillGroup } from './portfolio.models';
 
+
 // Tout le contenu du site est ici. Pour modifier un texte, c'est ce fichier qu'on change.
 
 export const PROFILE: Profile = {
@@ -74,59 +75,55 @@ export const SKILLS: SkillGroup[] = [
 
 export const JOBS: Job[] = [
   {
-    dates: 'févr. – juil. 2026',
     company: 'Atos',
+    url: 'https://atos.net/fr/',
+    logo: 'images/logos/atos.png',
+    activity: 'Services numériques',
+    dates: 'févr. – juil. 2026',
     place: 'Strasbourg',
-    role: 'Stage Full Stack et Business Intelligence · projet ASOT',
+    role: 'Stage Full Stack & Business Intelligence',
     points: [
-      'Besoins métier recueillis et KPI définis (montant à facturer, tickets en erreur)',
-      'Flux ETL et tableaux de bord de facturation ; page Suivi KPI développée avec Angular',
-      'Services back-end et API REST en Java / Spring Boot, données PostgreSQL et Oracle',
-      "Données de facturation fiabilisées par filtrage SQL des tickets de l'équipe TMA",
-      "Tests unitaires et d'intégration, recette, déploiements Jenkins (CI/CD), suivi des demandes par ticketing",
+      'Développement de la page <strong>Suivi KPI</strong> et des tableaux de bord de facturation en <strong>Angular</strong>.',
+      "Création de services back-end et d'<strong>API REST</strong> en <strong>Java / Spring Boot</strong>, connectés à <strong>PostgreSQL</strong>.",
+      "Fiabilisation des données de facturation : flux <strong>ETL</strong> et filtrage <strong>SQL</strong> des tickets de l'équipe TMA.",
+      'Tests, recette et déploiements automatisés avec <strong>Jenkins</strong>.',
     ],
-    result:
-      'Tableaux de bord en production, utilisés quotidiennement · 90 % des données fiabilisées',
-    stack: [
-      'Angular',
-      'Spring Boot',
-      'Informatica',
-      'Tableau',
-      'SAP BO',
-      'Oracle',
-      'PostgreSQL',
-      'Jenkins',
-    ],
+    result: 'Tableaux de bord en production, utilisés quotidiennement · 90 % des données fiabilisées.',
+    stack: ['Angular', 'Java', 'Spring Boot', 'PostgreSQL', 'Jenkins'],
   },
   {
-    dates: 'févr. – juil. 2025',
     company: 'Liebherr Mining Equipment',
+    url: 'https://www.liebherr.com/en-fr/group/location/colmar-mining-products-3752248',
+    logo: 'images/logos/liebherr.png',
+    activity: "Équipements pour l'industrie minière",
+    dates: 'févr. – juil. 2025',
     place: 'Colmar',
-    role: 'Stage Business Analyst et Business Intelligence',
+    role: 'Stage Business Analyst & Business Intelligence',
     points: [
-      "Processus ETL automatisant l'intégration et le nettoyage des données",
-      'Packages SSIS planifiés pour orchestrer des flux multi-sources',
-      'Rapports SSRS avec abonnements automatiques pour les managers',
+      "Automatisation de l'intégration et du nettoyage des données avec des packages <strong>SSIS</strong> planifiés.",
+      'Création de rapports <strong>SSRS</strong> avec abonnements automatiques pour les managers.',
+      'Suivi de projet sur <strong>Jira</strong> et documentation sur <strong>Confluence</strong>.',
     ],
-    result:
-      'Indicateurs hebdomadaires diffusés automatiquement aux managers, sans traitement manuel',
-    stack: ['SSIS', 'SSRS', 'C#', 'Jira', 'Confluence'],
+    result: 'Indicateurs hebdomadaires envoyés automatiquement aux managers, sans traitement manuel.',
+    stack: ['SSIS', 'SSRS', 'C#', 'Jira'],
   },
   {
-    dates: 'oct. 2022 – mars 2023',
     company: 'Integrated Digital Systems',
+    url: 'https://www.ids.com.lb',
+    logo: 'images/logos/ids.png',
+    activity: 'Solutions logicielles',
+    dates: 'oct. 2022 – mars 2023',
     place: 'Liban',
     role: 'Stage Développement Web .NET / C#',
     points: [
-      'Outil de construction de formulaires web paramétrables en C# / .NET et SQL Server',
-      'Déploiement en environnements Dev, Recette et Production',
-      'Architecture modélisée en UML, cohérente avec les besoins fonctionnels',
+      "Conception d'un <strong>outil web paramétrable</strong> de création de formulaires en <strong>C# / .NET</strong>.",
+      "Modélisation de l'architecture en <strong>UML</strong> et base de données <strong>SQL Server</strong>.",
+      'Déploiement en environnements Dev, Recette et Production.',
     ],
-    result: 'Outil livré, paramétrable sans modifier le code',
-    stack: ['C#', '.NET', 'SQL Server', 'UML'],
+    result: 'Outil livré et configurable sans modifier le code.',
+    stack: ['C#', '.NET', 'SQL Server'],
   },
 ];
-
 export const PROJECTS: Project[] = [
   {
     id: 'facturation-atos',

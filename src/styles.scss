@@ -18,6 +18,13 @@
   --surface-2: #f2f2ef; /* gris pour les étiquettes */
 }
 
+/* Le padding et la bordure sont COMPRIS dans la largeur (width) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0; /* supprime la marge de 8px que le navigateur ajoute par défaut */
   background: var(--bg); /* fond gris très clair */
@@ -114,4 +121,13 @@ body {
   border-radius: 8px;
   background: var(--surface-2);
   font-size: 14px;
+}
+
+.chip--outline {
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
 }
