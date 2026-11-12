@@ -7,9 +7,9 @@
       Disponible immédiatement · CDI
     </div>
 
-    <p class="eyebrow">// {{ title }}</p>
+    <p class="eyebrow">// {{ profile.title }}</p>
 
-    <h1 class="hero__title">{{ name }}</h1>
+    <h1 class="hero__title">{{ profile.name }}</h1>
 
     <p class="hero__lead">
       Je développe des applications web en <strong>Angular / Spring Boot</strong> et
@@ -25,14 +25,14 @@
           <path d="M5 12h14" /><path d="m13 6 6 6-6 6" />
         </svg>
       </a>
-      <a [href]="cvFullStack" target="_blank" class="btn btn--secondary">CV Full Stack</a>
-      <a [href]="cvBi" target="_blank" class="btn btn--secondary">CV BI</a>
+      <a [href]="profile.cvFullStack" target="_blank" class="btn btn--secondary">CV Full Stack</a>
+      <a [href]="profile.cvBi" target="_blank" class="btn btn--secondary">CV BI</a>
     </div>
 
     <div class="hero__meta">
-      <span>{{ location }}</span>
-      <a [href]="linkedin" target="_blank">LinkedIn</a>
-      <a [href]="github" target="_blank">GitHub</a>
+      <span>{{ profile.location }}</span>
+      <a [href]="profile.linkedin" target="_blank">LinkedIn</a>
+      <a [href]="profile.github" target="_blank">GitHub</a>
     </div>
   </div>
 
@@ -41,7 +41,7 @@
     <div class="photo">
       <div class="photo__circle"></div>
       <div class="photo__ring"></div>
-      <img [src]="photo" [alt]="'Portrait de ' + name" width="499" height="499" />
+      <img [src]="profile.photo" [alt]="'Portrait de ' + profile.name" width="499" height="499" />
       <div class="photo__card">
         <span class="photo__label">diplômé</span>
         <span class="photo__value">Ingénieur UTBM · 2026</span>

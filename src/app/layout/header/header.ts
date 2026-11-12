@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PROFILE } from '../../data/portfolio.data';
+
 
 @Component({
   selector: 'app-header',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './header.scss',
 })
 export class Header {
-  cvUrl = 'cv/Mohamad_ACHOUR_CV_FullStack.pdf';
+  protected readonly profile = PROFILE;
 }
