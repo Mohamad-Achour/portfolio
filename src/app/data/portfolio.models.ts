@@ -58,3 +58,14 @@ export interface Language {
   name: string;
   level: string;
 }
+
+export interface Stat {
+  value: string;
+  label: string;
+}
+
+export interface About {
+  title: string;
+  text: string;
+  stats: Stat[];
+}

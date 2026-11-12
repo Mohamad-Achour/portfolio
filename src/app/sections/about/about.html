@@ -1,0 +1,23 @@
+<section id="apropos" class="section section--white">
+  <div class="container about">
+
+    <div class="about__head">
+      <p class="eyebrow">01 / À propos</p>
+      <h2 class="h2">{{ about.title }}</h2>
+    </div>
+
+    <div class="about__body">
+      <p class="about__text">{{ about.text }}</p>
+
+      <div class="stats">
+        @for (stat of about.stats; track stat.label) {
+          <div class="stat">
+            <span class="stat__value">{{ stat.value }}</span>
+            <span class="stat__label">{{ stat.label }}</span>
+          </div>
+        }
+      </div>
+    </div>
+
+  </div>
+</section>

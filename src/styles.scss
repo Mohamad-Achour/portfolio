@@ -4,7 +4,7 @@
   --bg: #f7f7f5; /* fond de page, gris très clair */
   --text: #14161b; /* texte principal, presque noir */
   --muted: #5b6170; /* texte secondaire, gris */
-  --border-strong: #d5d5d0;   /* bordure un peu plus foncée, pour les boutons blancs */
+  --border-strong: #d5d5d0; /* bordure un peu plus foncée, pour les boutons blancs */
 
   /* Polices */
   --font-body: 'Inter', sans-serif;
@@ -13,6 +13,9 @@
 
   --surface: #ffffff; /* fond blanc des cartes */
   --border: #e4e4e0; /* couleur des bordures fines */
+
+  --accent-soft: rgba(47, 91, 234, 0.1); /* le bleu à 10 % d'opacité, pour les fonds légers */
+  --surface-2: #f2f2ef; /* gris pour les étiquettes */
 }
 
 body {
@@ -39,19 +42,19 @@ body {
 
 /* Base commune à tous les boutons */
 .btn {
-  display: inline-flex;      /* aligne le texte et l'icône sur une ligne */
+  display: inline-flex; /* aligne le texte et l'icône sur une ligne */
   align-items: center;
-  gap: 10px;                 /* espace entre le texte et l'icône */
-  min-height: 52px;          /* assez grand pour être cliqué au doigt sur mobile */
+  gap: 10px; /* espace entre le texte et l'icône */
+  min-height: 52px; /* assez grand pour être cliqué au doigt sur mobile */
   padding: 0 24px;
   border-radius: 12px;
   font-weight: 600;
   text-decoration: none;
   border: 1px solid transparent;
-  transition: transform 0.15s ease;   /* l'animation dure 0,15 seconde */
+  transition: transform 0.15s ease; /* l'animation dure 0,15 seconde */
 
   &:hover {
-    transform: translateY(-1px);      /* le bouton monte d'1px au survol */
+    transform: translateY(-1px); /* le bouton monte d'1px au survol */
   }
 }
 
@@ -65,4 +68,50 @@ body {
   background: var(--surface);
   border-color: var(--border-strong);
   color: var(--text);
+}
+
+/* Espacement vertical commun à toutes les sections */
+.section {
+  padding: 96px 0;
+  scroll-margin-top: 80px;   /* quand on clique un lien du menu, la section s'arrête 80px sous le haut,
+                                pour ne pas être cachée derrière le menu collé en haut */
+}
+
+/* Variante : section sur fond blanc, avec lignes en haut et en bas */
+.section--white {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Bloc "petit titre bleu + grand titre" en haut de chaque section */
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+/* Grand titre de section */
+.h2 {
+  margin: 0;
+  font-family: var(--font-title);
+  font-size: clamp(30px, 4vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+/* Liste d'étiquettes qui passe à la ligne si besoin */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Étiquette grise (ex : "Angular") */
+.chip--grey {
+  padding: 5px 12px;
+  border-radius: 8px;
+  background: var(--surface-2);
+  font-size: 14px;
 }
