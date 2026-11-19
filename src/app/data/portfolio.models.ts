@@ -34,13 +34,16 @@ export interface Job {
 //un type union : l avaleur ne peut pas etre que l'un de ces 3 textes
 export type ProjectCategory = 'dev' | 'bi' | 'both';
 
+export type ProjectType = 'stage' | 'academique' | 'personnel';
+
 export interface ProjectLink {
   label: string;
   url: string;
 }
 
-export interface Project {
+/*export interface Project {
   id: string;
+  type: ProjectType;
   category: ProjectCategory;
   context: string;
   title: string;
@@ -50,7 +53,19 @@ export interface Project {
   imagePlaceholder: string;
   links: ProjectLink[];
 }
+*/
 
+export interface Project {
+  id: string;
+  type: ProjectType;          
+  category: ProjectCategory;  
+  context: string;
+  title: string;
+  description: string;
+  stack: string[];
+  image: string;              
+  link: string;               
+}
 export interface Education {
   degree: string;
   school: string;

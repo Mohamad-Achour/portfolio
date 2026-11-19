@@ -1,5 +1,6 @@
 import { Component, computed, signal } from '@angular/core';
 import { PROJECTS } from '../../data/portfolio.data';
+import { ProjectType } from '../../data/portfolio.models';
 
 type Filter = 'all' | 'dev' | 'bi';
 
@@ -16,14 +17,24 @@ export class Projects {
     { id: 'bi', label: 'Business Intelligence' },
   ];
 
-  // Le filtre actuellement choisi (au départ : "Tous")
+  // Les groupes, dans l'ordre d'affichage
+  private readonly groupDefs: { type: ProjectType; title: string }[] = [
+    { type: 'stage', title: 'En entreprise' },
+    { type: 'academique', title: 'Projets académiques · UTBM' },
+    { type: 'personnel', title: 'Projet personnel' },
+  ];
+
   protected readonly active = signal<Filter>('all');
 
-  // La liste des projets à afficher, recalculée automatiquement
-  protected readonly shown = computed(() => {
+  private readonly filtered = computed(() => {
     const f = this.active();
-    return PROJECTS.filter(
-      (p) => f === 'all' || p.category === f || p.category === 'both',
-    );
+    return PROJECTS.filter((p) => f === 'all' || p.category === f || p.category === 'both');
   });
+
+  protected readonly groups = computed(() =>
+    this.groupDefs.map((group) => ({
+      ...group,
+      projects: this.filtered().filter((p) => p.type === group.type),
+    })),
+  );
 }

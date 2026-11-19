@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Illustration : facture validée">
+  <rect width="640" height="360" fill="#D3EEEA"/>
+  <path d="M0 250 C120 200 220 300 360 250 S560 190 640 230 V360 H0 Z" fill="#BCE3DD"/>
+  <g transform="translate(220 52)">
+    <path d="M0 18 a18 18 0 0 1 18 -18 h172 v250 l-14 -12 -14 12 -14 -12 -14 12 -14 -12 -14 12 -14 -12 -14 12 -14 -12 -14 12 -14 -12 -14 12 -14 -12 -14 12 -14 -12 -14 12 Z" fill="#FFFFFF"/>
+    <path d="M190 0 h12 a22 22 0 0 1 22 22 v32 h-34 Z" fill="#5FA8A0"/>
+    <rect x="28" y="40" width="120" height="12" rx="6" fill="#D5DBDF"/>
+    <rect x="28" y="76" width="96" height="10" rx="5" fill="#E2E7EA"/>
+    <rect x="140" y="76" width="24" height="10" rx="5" fill="#E2E7EA"/>
+    <rect x="28" y="106" width="80" height="10" rx="5" fill="#E2E7EA"/>
+    <rect x="140" y="106" width="24" height="10" rx="5" fill="#E2E7EA"/>
+    <rect x="28" y="136" width="104" height="10" rx="5" fill="#E2E7EA"/>
+    <rect x="140" y="136" width="24" height="10" rx="5" fill="#E2E7EA"/>
+    <rect x="28" y="166" width="70" height="10" rx="5" fill="#E2E7EA"/>
+  </g>
+  <circle cx="398" cy="240" r="46" fill="#2A8C84"/>
+  <path d="M376 241 l15 15 l29 -31" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

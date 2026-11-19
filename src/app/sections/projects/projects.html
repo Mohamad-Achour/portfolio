@@ -23,40 +23,38 @@
       </div>
     </div>
 
-    <!-- Grille des projets filtrés -->
-    <div class="grid">
-      @for (project of shown(); track project.id) {
-        <article class="card">
+    <!-- Un bloc par groupe : En entreprise, Académiques, Personnel -->
+    @for (group of groups(); track group.type) {
+      @if (group.projects.length > 0) {
+        <div class="group">
+          <h3 class="group__title">{{ group.title }}</h3>
 
-          @if (project.image) {
-            <img class="card__img" [src]="project.image" [alt]="project.title" />
-          } @else {
-            <div class="card__img placeholder">[{{ project.imagePlaceholder }}]</div>
-          }
+          <div class="grid">
+            @for (project of group.projects; track project.id) {
+              <article class="card">
+                <img class="card__img" [src]="project.image" alt="" width="640" height="360" />
 
-          <div class="card__body">
-            <span class="card__context">{{ project.context }}</span>
-            <h3 class="card__title">{{ project.title }}</h3>
-            <p class="card__desc">{{ project.description }}</p>
+                <div class="card__body">
+                  <span class="card__context">{{ project.context }}</span>
+                  <h4 class="card__title">{{ project.title }}</h4>
+                  <p class="card__desc">{{ project.description }}</p>
 
-            <div class="chips">
-              @for (tech of project.stack; track tech) {
-                <span class="chip--accent">{{ tech }}</span>
-              }
-            </div>
+                  <div class="chips">
+                    @for (tech of project.stack; track tech) {
+                      <span class="chip--accent">{{ tech }}</span>
+                    }
+                  </div>
 
-            <div class="card__links">
-              @for (link of project.links; track link.label) {
-                <a [href]="link.url" target="_blank" rel="noopener" class="card__link">
-                  {{ link.label }} ↗
-                </a>
-              }
-            </div>
+                  <a class="card__link" [href]="project.link" [attr.aria-label]="'Voir le projet ' + project.title">
+                    Voir le projet <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </article>
+            }
           </div>
-
-        </article>
+        </div>
       }
-    </div>
+    }
 
   </div>
 </section>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Illustration : boutique en ligne">
+  <rect width="640" height="360" fill="#DDE6FB"/>
+  <path d="M0 265 C130 225 250 305 390 265 S570 215 640 245 V360 H0 Z" fill="#CBD9F8"/>
+  <rect x="150" y="56" width="340" height="232" rx="18" fill="#FFFFFF"/>
+  <rect x="150" y="56" width="340" height="34" rx="18" fill="#EEF2FC"/>
+  <rect x="150" y="74" width="340" height="16" fill="#EEF2FC"/>
+  <circle cx="172" cy="73" r="5" fill="#C3CFEE"/><circle cx="188" cy="73" r="5" fill="#C3CFEE"/><circle cx="204" cy="73" r="5" fill="#C3CFEE"/>
+  <g>
+    <rect x="172" y="108" width="90" height="70" rx="10" fill="#C9D8FB"/>
+    <rect x="172" y="188" width="70" height="8" rx="4" fill="#DCE3F3"/>
+    <rect x="172" y="204" width="40" height="8" rx="4" fill="#2F5BEA"/>
+    <rect x="276" y="108" width="90" height="70" rx="10" fill="#B4C8F8"/>
+    <rect x="276" y="188" width="70" height="8" rx="4" fill="#DCE3F3"/>
+    <rect x="276" y="204" width="40" height="8" rx="4" fill="#2F5BEA"/>
+    <rect x="380" y="108" width="90" height="70" rx="10" fill="#C9D8FB"/>
+    <rect x="380" y="188" width="70" height="8" rx="4" fill="#DCE3F3"/>
+    <rect x="380" y="204" width="40" height="8" rx="4" fill="#2F5BEA"/>
+  </g>
+  <rect x="172" y="236" width="298" height="32" rx="9" fill="#EEF2FC"/>
+  <circle cx="470" cy="268" r="40" fill="#2F5BEA"/>
+  <path d="M448 254 h7 l7 24 h20 l6 -16 h-30" fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="465" cy="286" r="3.5" fill="#FFFFFF"/><circle cx="480" cy="286" r="3.5" fill="#FFFFFF"/>
+</svg>

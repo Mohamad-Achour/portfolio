@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Illustration : base de données et graphique de ventes">
+  <rect width="640" height="360" fill="#F9DFE8"/>
+  <path d="M0 268 C140 228 260 308 400 268 S580 218 640 248 V360 H0 Z" fill="#F3CCDA"/>
+  <g transform="translate(150 80)">
+    <path d="M0 22 v150 a75 22 0 0 0 150 0 v-150" fill="#E592AE"/>
+    <ellipse cx="75" cy="22" rx="75" ry="22" fill="#F2BDCF"/>
+    <path d="M0 72 a75 22 0 0 0 150 0" fill="none" stroke="#F7D4E0" stroke-width="4"/>
+    <path d="M0 122 a75 22 0 0 0 150 0" fill="none" stroke="#F7D4E0" stroke-width="4"/>
+  </g>
+  <path d="M310 180 h40" stroke="#E592AE" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 10"/>
+  <path d="M344 170 l12 10 l-12 10" fill="none" stroke="#D0587E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="370" y="70" width="170" height="210" rx="18" fill="#FFFFFF"/>
+  <rect x="390" y="92" width="80" height="9" rx="4.5" fill="#EBD3DC"/>
+  <rect x="396" y="196" width="22" height="58" rx="4" fill="#F2BDCF"/>
+  <rect x="428" y="168" width="22" height="86" rx="4" fill="#E592AE"/>
+  <rect x="460" y="182" width="22" height="72" rx="4" fill="#E07A9C"/>
+  <rect x="492" y="140" width="22" height="114" rx="4" fill="#D0587E"/>
+  <path d="M396 150 L439 128 L471 138 L512 108" fill="none" stroke="#3A3F47" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

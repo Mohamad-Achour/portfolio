@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Illustration : flux de données vers des rapports">
+  <rect width="640" height="360" fill="#E7E2F7"/>
+  <path d="M0 270 C140 230 260 310 400 270 S580 220 640 250 V360 H0 Z" fill="#DAD2F3"/>
+  <path d="M220 170 C290 170 290 100 360 100" fill="none" stroke="#CABFEF" stroke-width="22" stroke-linecap="round"/>
+  <path d="M220 190 C290 190 290 250 350 250" fill="none" stroke="#CABFEF" stroke-width="22" stroke-linecap="round"/>
+  <rect x="120" y="130" width="100" height="100" rx="20" fill="#9D8FDE"/>
+  <g transform="translate(360 50)">
+    <path d="M0 14 a14 14 0 0 1 14 -14 h98 l26 26 v74 a14 14 0 0 1 -14 14 h-110 a14 14 0 0 1 -14 -14 Z" fill="#FFFFFF"/>
+    <path d="M112 0 v26 h26 Z" fill="#D3CBF1"/>
+    <rect x="16" y="18" width="56" height="7" rx="3.5" fill="#DCD6F2"/>
+    <rect x="16" y="32" width="38" height="7" rx="3.5" fill="#E8E4F7"/>
+    <rect x="20" y="78" width="16" height="22" rx="3" fill="#B6AAE8"/>
+    <rect x="44" y="66" width="16" height="34" rx="3" fill="#A497E2"/>
+    <rect x="68" y="56" width="16" height="44" rx="3" fill="#9384DB"/>
+    <rect x="92" y="44" width="16" height="56" rx="3" fill="#8170D4"/>
+  </g>
+  <g transform="translate(350 196)">
+    <path d="M0 14 a14 14 0 0 1 14 -14 h98 l26 26 v74 a14 14 0 0 1 -14 14 h-110 a14 14 0 0 1 -14 -14 Z" fill="#FFFFFF"/>
+    <path d="M112 0 v26 h26 Z" fill="#D3CBF1"/>
+    <rect x="16" y="18" width="56" height="7" rx="3.5" fill="#DCD6F2"/>
+    <rect x="16" y="32" width="38" height="7" rx="3.5" fill="#E8E4F7"/>
+    <rect x="20" y="70" width="16" height="30" rx="3" fill="#B6AAE8"/>
+    <rect x="44" y="56" width="16" height="44" rx="3" fill="#A497E2"/>
+    <rect x="68" y="62" width="16" height="38" rx="3" fill="#9384DB"/>
+    <rect x="92" y="48" width="16" height="52" rx="3" fill="#8170D4"/>
+  </g>
+</svg>

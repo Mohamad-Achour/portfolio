@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Illustration : formulaire configurable">
+  <rect width="640" height="360" fill="#FBE8D6"/>
+  <path d="M0 280 C150 240 270 320 420 270 S590 230 640 255 V360 H0 Z" fill="#F6DABF"/>
+  <rect x="190" y="50" width="250" height="250" rx="22" fill="#FFFFFF"/>
+  <rect x="216" y="80" width="198" height="40" rx="9" fill="#EEF0F2" stroke="#C9CED3" stroke-width="2"/>
+  <rect x="232" y="96" width="90" height="8" rx="4" fill="#C9CED3"/>
+  <rect x="216" y="140" width="198" height="40" rx="9" fill="#FFFFFF" stroke="#C9CED3" stroke-width="2"/>
+  <path d="M388 156 l7 7 l7 -7" fill="none" stroke="#3A3F47" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="216" y="200" width="198" height="40" rx="9" fill="#FFFFFF" stroke="#C9CED3" stroke-width="2"/>
+  <rect x="230" y="210" width="20" height="20" rx="5" fill="#2A8C84"/>
+  <path d="M235 220 l4 4 l7 -8" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="262" y="216" width="80" height="8" rx="4" fill="#C9CED3"/>
+  <path d="M456 214 l0 46 l12 -11 l9 20 l9 -4 l-9 -19 l16 -1 Z" fill="#2E3440" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M452 196 l-6 -12 M466 192 l4 -13 M476 202 l12 -6" stroke="#2A8C84" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

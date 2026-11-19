@@ -39,35 +39,57 @@
   color: #fff;
 }
 
-/* ---------- Grille de cartes ---------- */
+/* ---------- Groupes ---------- */
+.group + .group {
+  margin-top: 56px;               /* espace entre deux groupes */
+}
+
+.group__title {
+  margin: 0 0 20px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;      /* s'affiche "EN ENTREPRISE" */
+  letter-spacing: 0.08em;         /* lettres espacées, plus lisible en majuscules */
+  color: var(--muted);
+}
+
+/* ---------- Cartes ---------- */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 24px;
 }
 
 .card {
-  border-radius: 20px;
+  padding: 14px;                  /* marge blanche autour de l'illustration */
+  border-radius: 22px;
   background: var(--surface);
-  border: 1px solid var(--border);
-  overflow: hidden;                 /* l'image suit les coins arrondis de la carte */
+  border: 2px solid var(--border);
   display: flex;
   flex-direction: column;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    border-color: var(--accent);  /* contour bleu seulement au survol */
+    transform: translateY(-3px);  /* la carte monte légèrement */
+  }
 }
 
-/* Image ou zone grise : même hauteur pour toutes les cartes */
 .card__img {
   width: 100%;
-  height: 220px;
+  height: auto;
+  aspect-ratio: 16 / 9;           /* même proportion pour toutes les illustrations */
+  border-radius: 14px;
   object-fit: cover;
 }
 
 .card__body {
-  flex: 1 1 auto;                   /* le corps prend toute la hauteur restante de la carte */
-  padding: 24px;
+  flex: 1 1 auto;
+  padding: 18px 8px 4px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
 .card__context {
@@ -80,6 +102,7 @@
   margin: 0;
   font-family: var(--font-title);
   font-size: 22px;
+  line-height: 1.2;
   letter-spacing: -0.015em;
 }
 
@@ -88,24 +111,21 @@
   color: var(--muted);
 }
 
-/* Liens collés en bas de la carte */
-.card__links {
-  margin-top: auto;                 /* pousse les liens tout en bas */
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding-top: 8px;
-}
-
 .card__link {
+  margin-top: auto;               /* collé en bas de la carte */
   display: inline-flex;
   align-items: center;
+  gap: 6px;
   min-height: 44px;
-  color: var(--text);
+  color: var(--accent);
   font-weight: 600;
   text-decoration: none;
 
-  &:hover {
-    color: var(--accent);
+  span {
+    transition: transform 0.2s ease;
+  }
+
+  &:hover span {
+    transform: translateX(4px);   /* la flèche avance au survol */
   }
 }
