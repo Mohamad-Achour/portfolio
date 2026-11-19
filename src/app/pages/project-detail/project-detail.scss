@@ -1,0 +1,18 @@
+.detail {
+  padding-top: 56px;
+  padding-bottom: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.back {
+  align-self: flex-start;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text);
+
+  &:hover {
+    color: var(--accent);
+  }
+}

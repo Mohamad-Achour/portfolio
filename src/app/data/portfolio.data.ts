@@ -126,16 +126,74 @@ export const JOBS: Job[] = [
 ];
 export const PROJECTS: Project[] = [
   // ---------- En entreprise ----------
-  {
+    {
     id: 'facturation-atos',
     type: 'stage',
     category: 'both',
-    context: 'Atos · stage 2026',
-    title: 'Suivi de la facturation',
-    description: 'Tableau de bord Angular et API Spring Boot pour suivre les montants à facturer et les tickets en erreur. 90 % des données fiabilisées.',
-    stack: ['Angular', 'Spring Boot', 'ETL'],
+    context: "Atos · Stage de fin d'études · 2026",
+    title: 'Facturation et suivi des interventions',
+    description: "J'ai fiabilisé les données de tickets, refondu le tableau de bord de facturation et développé un module de suivi des délais, de l'activité et de la qualité des données.",
+    stack: ['Angular', 'Spring Boot', 'PostgreSQL', 'Apache ECharts'],
     image: 'images/projects/facturation.svg',
     link: '#',
+    caseStudy: {
+      headline: 'Des tickets aux tableaux de bord de facturation et de suivi',
+      meta: "Atos · Stage de fin d'études · Strasbourg · 2026",
+      role: 'Développement Full Stack & Business Intelligence',
+      highlights: [
+        { value: '4', label: 'indicateurs pour contrôler la facturation' },
+        { value: '6', label: "vues de suivi de l'activité" },
+        { value: 'Excel', label: 'export du détail des tickets' },
+      ],
+      sections: [
+        {
+          title: 'Le besoin',
+          paragraphs: [
+            "L'équipe de maintenance applicative devait contrôler chaque mois les interventions à facturer et suivre le respect des délais. Or, les données incluaient des tickets hors périmètre et omettaient certaines demandes réellement traitées par l'équipe. Les responsables devaient donc vérifier manuellement une partie des résultats.",
+          ],
+        },
+        {
+          title: 'Fiabiliser les données dès leur import',
+          paragraphs: [
+            "J'ai utilisé l'historique des interventions pour déterminer si un ticket relevait de l'équipe. Après validation de cette règle, j'ai modifié le traitement de synchronisation pour récupérer les tickets manquants, éviter les doublons et appliquer un périmètre commun aux vues de facturation et de suivi.",
+          ],
+        },
+        {
+          title: 'Repenser le contrôle de la facturation',
+          paragraphs: [
+            "J'ai refondu la page de facturation autour de quatre indicateurs : le montant à facturer, les tickets facturables, le total des unités d'œuvre et les tickets en anomalie. Les responsables peuvent filtrer les résultats par période, périmètre ou lot, consulter le motif qui bloque la facturation d'un ticket et exporter le détail dans Excel.",
+          ],
+        },
+        {
+          title: "Développer le suivi de l'activité",
+          paragraphs: [
+            "J'ai développé six vues couvrant la synthèse, le planning, la qualité des données, les flux d'activité, les tickets prioritaires et les types de maintenance. Une carte permet par exemple d'ouvrir la liste des tickets exclus d'un indicateur de planning et de voir quelle information manque pour effectuer le calcul.",
+          ],
+        },
+        {
+          title: 'Choix techniques et livraison',
+          paragraphs: [
+            "J'ai comparé plusieurs options de visualisation et intégré les tableaux de bord dans l'application existante. Les interfaces Angular utilisent Apache ECharts pour les visualisations et consomment des API REST développées en Java avec Spring Boot, sur une base PostgreSQL. J'ai participé à la recette et à la préparation des livraisons avec GitLab et Jenkins.",
+          ],
+        },
+        {
+          title: 'Ce que le projet a changé',
+          paragraphs: [
+            "Les responsables disposent d'une vue consolidée pour contrôler la facturation. Ils peuvent passer d'un montant ou d'un indicateur au détail des tickets concernés. Les données manquantes qui empêchent certains calculs sont visibles, avec le motif associé à chaque ticket.",
+          ],
+        },
+      ],
+      architecture: [
+        { kind: 'Source', name: 'Outil de tickets' },
+        { kind: 'Import', name: 'Traitement de synchronisation' },
+        { kind: 'Base de données', name: 'PostgreSQL' },
+        { kind: 'Back-end', name: 'API REST Spring Boot' },
+        { kind: 'Front-end', name: 'Tableaux de bord Angular + ECharts' },
+      ],
+      visuals: [
+        { image: 'images/projects/facturation.svg', caption: 'Illustration du projet avec données fictives' },
+      ],
+    },
   },
   {
     id: 'reporting-liebherr',

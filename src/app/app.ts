@@ -1,17 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './layout/header/header';
-import { Hero } from './sections/hero/hero';
-import { About } from './sections/about/about';
-import { Skills } from './sections/skills/skills';
-import { Experience } from './sections/experience/experience';
-import { Projects } from './sections/projects/projects';
 
 @Component({
-  imports: [RouterOutlet, Header, Hero, About, Skills, Experience, Projects],
   selector: 'app-root',
-  styleUrl: './app.scss',
+  imports: [RouterOutlet, Header],
   templateUrl: './app.html',
+  styleUrl: './app.scss',
 })
-export class App {
-}
+export class App {}

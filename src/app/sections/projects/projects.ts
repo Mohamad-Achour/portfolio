@@ -1,10 +1,12 @@
 import { Component, computed, signal } from '@angular/core';
 import { PROJECTS } from '../../data/portfolio.data';
 import { ProjectType } from '../../data/portfolio.models';
+import { RouterLink } from '@angular/router';
 
 type Filter = 'all' | 'dev' | 'bi';
 
 @Component({
+  imports: [RouterLink],
   selector: 'app-projects',
   templateUrl: './projects.html',
   styleUrl: './projects.scss',

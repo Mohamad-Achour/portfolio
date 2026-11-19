@@ -10,50 +10,52 @@
 
       <div class="filters" role="group" aria-label="Filtrer les projets">
         @for (f of filters; track f.id) {
-          <button
-            type="button"
-            class="filter"
-            [class.filter--active]="active() === f.id"
-            [attr.aria-pressed]="active() === f.id"
-            (click)="active.set(f.id)"
-          >
-            {{ f.label }}
-          </button>
+        <button type="button" class="filter" [class.filter--active]="active() === f.id"
+          [attr.aria-pressed]="active() === f.id" (click)="active.set(f.id)">
+          {{ f.label }}
+        </button>
         }
       </div>
     </div>
 
     <!-- Un bloc par groupe : En entreprise, Académiques, Personnel -->
     @for (group of groups(); track group.type) {
-      @if (group.projects.length > 0) {
-        <div class="group">
-          <h3 class="group__title">{{ group.title }}</h3>
+    @if (group.projects.length > 0) {
+    <div class="group">
+      <h3 class="group__title">{{ group.title }}</h3>
 
-          <div class="grid">
-            @for (project of group.projects; track project.id) {
-              <article class="card">
-                <img class="card__img" [src]="project.image" alt="" width="640" height="360" />
+      <div class="grid">
+        @for (project of group.projects; track project.id) {
+        <article class="card">
+          <img class="card__img" [src]="project.image" alt="" width="640" height="360" />
 
-                <div class="card__body">
-                  <span class="card__context">{{ project.context }}</span>
-                  <h4 class="card__title">{{ project.title }}</h4>
-                  <p class="card__desc">{{ project.description }}</p>
+          <div class="card__body">
+            <span class="card__context">{{ project.context }}</span>
+            <h4 class="card__title">{{ project.title }}</h4>
+            <p class="card__desc">{{ project.description }}</p>
 
-                  <div class="chips">
-                    @for (tech of project.stack; track tech) {
-                      <span class="chip--accent">{{ tech }}</span>
-                    }
-                  </div>
+            <div class="chips">
+              @for (tech of project.stack; track tech) {
+              <span class="chip--accent">{{ tech }}</span>
+              }
+            </div>
 
-                  <a class="card__link" [href]="project.link" [attr.aria-label]="'Voir le projet ' + project.title">
-                    Voir le projet <span aria-hidden="true">→</span>
-                  </a>
-                </div>
-              </article>
+            @if (project.caseStudy) {
+            <a class="card__link" [routerLink]="['/projets', project.id]"
+              [attr.aria-label]="'Voir l\'étude de cas ' + project.title">
+              Voir l'étude de cas <span aria-hidden="true">→</span>
+            </a>
+            } @else {
+            <a class="card__link" [href]="project.link" [attr.aria-label]="'Voir le projet ' + project.title">
+              Voir le projet <span aria-hidden="true">→</span>
+            </a>
             }
           </div>
-        </div>
-      }
+        </article>
+        }
+      </div>
+    </div>
+    }
     }
 
   </div>

@@ -1,0 +1,11 @@
+<section class="container detail">
+	<a routerLink="/" fragment="projets" class="back">← Retour aux projets</a>
+
+	@if (project(); as p) {
+	<p class="eyebrow">{{ p.context }}</p>
+	<h1>{{ p.title }}</h1>
+	<p>{{ p.caseStudy?.headline }}</p>
+	} @else {
+	<h1>Projet introuvable</h1>
+	}
+</section>

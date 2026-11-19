@@ -55,6 +55,16 @@ export interface ProjectLink {
 }
 */
 
+export interface CaseStudy {
+  headline: string;                                  // grand titre de la page
+  meta: string;                                      // "Atos · Stage de fin d'études · Strasbourg · 2026"
+  role: string;                                      // "Développement Full Stack & Business Intelligence"
+  highlights: { value: string; label: string }[];    // chiffres clés du bandeau
+  sections: { title: string; paragraphs: string[] }[];
+  architecture: { kind: string; name: string }[];    // schéma technique
+  visuals: { image: string; caption: string }[];     // maquettes fictives
+}
+
 export interface Project {
   id: string;
   type: ProjectType;          
@@ -64,7 +74,8 @@ export interface Project {
   description: string;
   stack: string[];
   image: string;              
-  link: string;               
+  link: string;
+  caseStudy?: CaseStudy;               
 }
 export interface Education {
   degree: string;
