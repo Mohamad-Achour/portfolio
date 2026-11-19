@@ -1,0 +1,62 @@
+<section id="projets" class="section">
+  <div class="container">
+
+    <!-- En-tête : titre à gauche, filtres à droite -->
+    <div class="head">
+      <div class="section-head">
+        <p class="eyebrow">04 / Projets</p>
+        <h2 class="h2">Projets sélectionnés</h2>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filtrer les projets">
+        @for (f of filters; track f.id) {
+          <button
+            type="button"
+            class="filter"
+            [class.filter--active]="active() === f.id"
+            [attr.aria-pressed]="active() === f.id"
+            (click)="active.set(f.id)"
+          >
+            {{ f.label }}
+          </button>
+        }
+      </div>
+    </div>
+
+    <!-- Grille des projets filtrés -->
+    <div class="grid">
+      @for (project of shown(); track project.id) {
+        <article class="card">
+
+          @if (project.image) {
+            <img class="card__img" [src]="project.image" [alt]="project.title" />
+          } @else {
+            <div class="card__img placeholder">[{{ project.imagePlaceholder }}]</div>
+          }
+
+          <div class="card__body">
+            <span class="card__context">{{ project.context }}</span>
+            <h3 class="card__title">{{ project.title }}</h3>
+            <p class="card__desc">{{ project.description }}</p>
+
+            <div class="chips">
+              @for (tech of project.stack; track tech) {
+                <span class="chip--accent">{{ tech }}</span>
+              }
+            </div>
+
+            <div class="card__links">
+              @for (link of project.links; track link.label) {
+                <a [href]="link.url" target="_blank" rel="noopener" class="card__link">
+                  {{ link.label }} ↗
+                </a>
+              }
+            </div>
+          </div>
+
+        </article>
+      }
+    </div>
+
+  </div>
+</section>

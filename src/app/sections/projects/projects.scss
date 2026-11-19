@@ -1,0 +1,111 @@
+/* En-tête : titre à gauche, filtres à droite, en bas alignés */
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;            /* filtres alignés sur le bas du titre */
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 40px;
+
+  .section-head {
+    margin-bottom: 0;               /* on annule la marge globale, c'est .head qui la gère */
+  }
+}
+
+/* ---------- Boutons de filtre ---------- */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter {
+  min-height: 44px;                 /* taille minimum recommandée pour un doigt sur mobile */
+  padding: 0 18px;
+  border-radius: 999px;             /* forme pilule */
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--muted);
+  font: inherit;                    /* un <button> n'hérite pas de la police par défaut : on la force */
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;                  /* curseur "main" au survol */
+}
+
+/* Le bouton sélectionné, grâce à [class.filter--active] */
+.filter--active {
+  background: var(--text);
+  border-color: var(--text);
+  color: #fff;
+}
+
+/* ---------- Grille de cartes ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  overflow: hidden;                 /* l'image suit les coins arrondis de la carte */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image ou zone grise : même hauteur pour toutes les cartes */
+.card__img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card__body {
+  flex: 1 1 auto;                   /* le corps prend toute la hauteur restante de la carte */
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card__context {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.card__title {
+  margin: 0;
+  font-family: var(--font-title);
+  font-size: 22px;
+  letter-spacing: -0.015em;
+}
+
+.card__desc {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Liens collés en bas de la carte */
+.card__links {
+  margin-top: auto;                 /* pousse les liens tout en bas */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 8px;
+}
+
+.card__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--accent);
+  }
+}

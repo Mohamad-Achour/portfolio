@@ -131,3 +131,26 @@ body {
   font-size: 13px;
   color: var(--muted);
 }
+
+/* Étiquette bleue (technologies des projets) */
+.chip--accent {
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+/* Zone grise qui remplace une image pas encore disponible */
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  background: #ececE8;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
